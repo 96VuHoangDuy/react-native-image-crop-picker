@@ -67,7 +67,7 @@ class Compression {
         File resizeImageFile = new File(imageDirectory, UUID.randomUUID() + ".jpg");
 
         OutputStream os = new BufferedOutputStream(new FileOutputStream(resizeImageFile));
-        bitmap.compress(Bitmap.CompressFormat.JPEG, quality, os);
+        bitmap.compress(Bitmap.CompressFormat.PNG, quality, os);
 
         // Don't set unnecessary exif attribute
         if (shouldSetOrientation(originalOrientation)) {
